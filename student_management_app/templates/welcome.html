@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>welcome</title>
+</head>
+<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
+
+<body>
+  <div class="code">
+    <!-- <h1><span style="color: #97C774">WE</span><span style="color: #B63E98">L</span><span style="color: #D18E62">C</span><span style="color: #DB3E41">O</span><span style="color: #1BABA5">ME</span></h1> -->
+    <h1>Welcome</h1>
+    <h2> </h2>
+  </div>
+
+
+
+
+  <div class="container">
+    <div class="grid-7 element-animation">
+      <!--card-1-->
+      <div class="card color-card">
+
+        <img src="{% static 'pics/student.jpg' %}" alt="profile-pic" class="profile">
+        <h1 class="title">Student Login</h1>
+
+        <a href="{% url 'login' %}">
+          <button class="btn color-a top"> click</button>
+        </a>
+        <div class="container">
+
+        </div>
+      </div>
+    </div>
+
+    <!--card-2-->
+
+    <div class="grid-7 element-animation">
+      <div class="card color-card-2">
+
+        <img src="{% static 'pics/faculty.jpeg' %}" alt="profile-pic" class="profile">
+        <h1 class="title-2">Staff Login</h1>
+
+        <a href="{% url 'login' %}">
+          <button class="btn color-a top"> click</button>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+</body>
+
+</html>

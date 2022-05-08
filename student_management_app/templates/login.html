@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<script src="https://kit.fontawesome.com/ce9acf4a59.js" crossorigin="anonymous"></script>
+<body>
+
+
+  <div class="login-box">
+    <h2>Login</h2>
+    <form id="form"  action="{% url 'doLogin' %}" method="post" >
+      {% csrf_token %}
+      <!-- autocomplete fix   -->
+      <div style="display: none;">
+        <input type="text" autocomplete="new-password">
+        <input type="password" autocomplete="new-password">
+      </div>
+      <!-- autocomplete fix   -->
+      {% include 'includes/message.html'  %}
+      <div class="user-box">
+        <input type="text" name="email"  placeholder="Email"  required>
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="password" placeholder="Password"  required>
+        <label>Password</label>
+      </div>
+      <a > 
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <button type="submit" class="submit-btn" >LOGIN</button>
+      </a>
+    </form>
+  </div>
+
+  <script>
+  
+  (function() {
+    var some_id = document.getElementById('some_id');
+    some_id.type = 'text';
+    some_id.removeAttribute('autocomplete');
+})();
+  </script>
+</body>
+</html>

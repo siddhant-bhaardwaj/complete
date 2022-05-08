@@ -1,0 +1,59 @@
+{% load static %}
+
+<style>
+  .errorModule {
+  margin: 40px auto 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.errorModule .errorIcon {
+  font-size: 30px;
+  margin: 15px;
+  -webkit-animation: animateIcon 5s infinite;
+          animation: animateIcon 5s infinite;
+}
+
+.errorModule .errorMsg {
+  font-size: 20px;
+}
+
+@-webkit-keyframes animateIcon {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes animateIcon {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+</style>
+
+{% for message in messages %} 
+     <div class="errorModule">
+      <div class="errorIcon">
+        <img src="{% static 'pics/error.png' %}" alt="">
+      </div>
+      <div class="errorMsg">{{message}}</div>
+    </div>
+  {% endfor %}
